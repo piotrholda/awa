@@ -6,7 +6,8 @@ import {AccountFormComponent} from "./account-form/account-form.component";
 const routes: Routes = [
   { path: '', redirectTo: '/accounts', pathMatch: 'full' },
   { path: 'accounts', component: AccountListComponent },
-  { path: 'account', component: AccountFormComponent }
+  { path: 'account', component: AccountFormComponent },
+  { path: '**', redirectTo: '/accounts' }
 ];
 
 @NgModule({
