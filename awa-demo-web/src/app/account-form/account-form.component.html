@@ -3,7 +3,7 @@
   <form #accountForm="ngForm" (ngSubmit)="onSubmit(account)">
 
     <div class="form-group">
-      <label for="login">Login</label>
+      <label for="login">Login *</label>
       <input type="text"
              class="form-control"
              [class.is-invalid]="login.invalid && login.touched"
@@ -16,7 +16,7 @@
     </div>
 
     <div class="form-group">
-      <label for="email">Email address</label>
+      <label for="email">Email address *</label>
       <input type="email"
              class="form-control"
              [class.is-invalid]="email.invalid && email.touched"
@@ -29,7 +29,7 @@
     </div>
 
     <div class="form-group">
-      <label for="password">Password</label>
+      <label for="password">Password *</label>
       <input type="password"
              class="form-control"
              [class.is-invalid]="password.invalid && password.touched"
@@ -42,7 +42,7 @@
     </div>
 
     <div class="form-group">
-      <label for="confirmPassword">Confirm password</label>
+      <label for="confirmPassword">Confirm password *</label>
       <input type="password"
              class="form-control"
              [class.is-invalid]="confirmPassword.invalid && confirmPassword.touched"
