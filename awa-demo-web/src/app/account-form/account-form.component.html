@@ -52,10 +52,9 @@
              required
              #confirmPassword="ngModel"
              [(ngModel)]="account.confirmPassword">
-      <div *ngIf="confirmPassword.errors?.equalTo && confirmPassword.touched"
-           class="invalid-feedback">Please provide the same password</div>
     </div>
 
     <button type="submit" class="btn btn-primary">Submit</button>
+
   </form>
 </div>

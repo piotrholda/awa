@@ -8,6 +8,8 @@ import { AppRoutingModule } from './/app-routing.module';
 import { AccountListComponent } from './account-list/account-list.component';
 import { AccountFormComponent } from './account-form/account-form.component';
 import {FormsModule} from "@angular/forms";
+import {AccountService} from "./account.service";
+import {HttpClientModule} from "@angular/common/http";
 
 @NgModule({
   declarations: [
@@ -19,10 +21,15 @@ import {FormsModule} from "@angular/forms";
   ],
   imports: [
     BrowserModule,
+    HttpClientModule,
     AppRoutingModule,
     FormsModule
   ],
-  providers: [],
-  bootstrap: [AppComponent]
+  providers: [
+    AccountService
+  ],
+  bootstrap: [
+    AppComponent
+  ]
 })
 export class AppModule { }

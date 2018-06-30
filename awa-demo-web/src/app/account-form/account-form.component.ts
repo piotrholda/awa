@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {Account} from "../model/account";
+import {AccountService} from "../account.service";
 
 @Component({
   selector: 'app-account-form',
@@ -10,13 +11,13 @@ export class AccountFormComponent implements OnInit {
 
   account: Account;
 
-  constructor() { }
+  constructor(private accountService: AccountService) { }
 
   ngOnInit() {
     this.account = new Account();
   }
 
   onSubmit(account: Account) {
-
+    this.accountService.register(account);
   }
 }
